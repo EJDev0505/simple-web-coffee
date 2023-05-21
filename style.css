@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    height: 100vh;
+    width: auto;
+    background-color: #1f1c1c;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+}
+
+.header .logo img{
+    width: 8rem;
+    height: 7rem;
+}
+
+.header .nav ul{
+display: flex;
+color: rgb(13, 206, 206);
+list-style: none;
+gap: 4rem;
+align-items: center;
+text-transform: uppercase;
+letter-spacing: 2px;
+padding-right: 2rem;
+font-weight: 600;
+cursor: pointer;
+font-size: clamp(0.7rem, 0.325rem + 1.2vw, 1rem);
+transition: scale .5s all ease-in-out;
+}
+
+li:hover{
+    color: #fff;
+    scale: 1.1;
+}
+
+
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    top: 4rem;
+    position: relative;
+}
+
+
+
+
+.info{
+  position: relative;
+  top: -4rem;
+}
+
+.info h2{
+    color: #fff;
+    font-size: clamp(2rem, 0.75rem + 4vw, 3rem);
+    letter-spacing: 1px;
+}
+
+.info span{
+    color: rgb(13, 206, 206);
+    font-size: clamp(2rem, -0.5rem + 8vw, 4rem);
+    padding-left: 1rem;
+    letter-spacing: 2.5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info .text{
+    color: #fff;
+    width: 35rem;
+    height: 4.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: clamp(0.625rem, 0.3906rem + 0.75vw, 0.8125rem);
+}
+
+.section .info .coffee{
+color: rgb(13, 206, 206);
+font-weight: 800;
+font-size: clamp(2rem, 0.75rem + 4vw, 3rem);
+}
+
+.image-sum img{
+  top: -3rem;
+position: relative;
+height: 26rem;
+width: 100%;
+max-width: 500px;
+animation: bounce 1.3s cubic-bezier(1,1, 1, 1) infinite alternate;
+}
+
+
+@keyframes bounce {
+    100%{
+        transform: translateY(35px);
+    }
+}
+
+.button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(13, 206, 206);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    width: 8rem;
+    top: 1rem;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background: rgb(13, 206, 206);
+    box-shadow: 0 0 30px 5px #fff;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+  .button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+  
+
+  .info .contact{
+    position:relative;
+    font-size: 1.5rem;
+    color:  rgb(13, 206, 206);
+    top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.info .name{
+    position: relative;
+    color: rgb(13, 206, 206);
+    font-size: 1.3rem;
+    font-weight: 700;
+    right: -10rem;
+    top: -.7rem;
+}
+
+.fa-facebook{
+    color:  rgb(13, 206, 206);
+}
+
+.fa-facebook:hover{
+    scale: 1.4;
+}
+
+.fa-github{
+    color: rgb(13, 206, 206);
+}
+
+.fa-github:hover{
+    scale: 1.4;
+}
+
+.fa-facebook-messenger{
+    color: rgb(13, 206, 206);
+}
+
+.fa-facebook-messenger:hover{
+    scale: 1.4;
+}
+
+
+
+@media screen and (max-width:480px) {
+
+  .header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1px;
+    transition: 1s all ease-in-out;
+  }
+
+  .section{
+    flex-direction: column;
+  }
+
+  .image-sum img{
+    position: relative;
+    height: 10rem;
+    width: 100%;
+    max-width: 500px;
+    top: 5rem;
+  }
+
+  .info{
+    top: -2rem;
+    flex-direction: column;
+  }
+  
+.info .contact{
+  font-size: 1.5rem;
+  top: 1rem;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  margin: auto;
+}
+
+.info .name{
+  position: relative;
+  top: 1rem;
+  right: -7.3rem;
+}
+
+.button{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5.5rem;
+  top: 4rem;
+}
+
+
+  .section .info .coffee{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+  .info h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+.header .logo img{
+  position: relative;
+  width: 4rem;
+  height: 3rem;
+
+  cursor: pointer;
+}
+
+.header .nav ul{
+  gap: 1rem;
+  transition: .5s all ease-in-out;
+  padding-right: 1rem;
+}
+
+.info .text{
+  padding-top: .5rem;
+  justify-content: center;  
+  flex-direction: column;
+  max-width: 19rem;
+  text-align: center;
+}
+
+
+}
